@@ -9,7 +9,6 @@ A comprehensive School Management System built with ASP.NET Core, following Clea
 - [Technology Stack](#technology-stack)
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
 - [API Documentation](#api-documentation)
 - [Database](#database)
 - [Authentication & Authorization](#authentication--authorization)
@@ -120,7 +119,7 @@ The project follows **Clean Architecture** principles with clear separation of c
 │  - Mapping                           │
 └──────────────┬──────────────────────┘
                │
-┌──────────────▼──────────────────────┐
+┌──────────────·──────────────────────┐
 │      Application Layer               │
 │ (SchoolManagement.Application)       │
 │  - Commands & Queries                │
@@ -129,7 +128,7 @@ The project follows **Clean Architecture** principles with clear separation of c
 │  - Interfaces                        │
 └──────────────┬──────────────────────┘
                │
-┌──────────────▼──────────────────────┐
+┌──────────────·──────────────────────┐
 │        Domain Layer                 │
 │  (SchoolManagement.Domain)          │
 │  - Entities                          │
@@ -138,7 +137,7 @@ The project follows **Clean Architecture** principles with clear separation of c
 │  - Domain Errors                     │
 └──────────────┬──────────────────────┘
                │
-┌──────────────▼──────────────────────┐
+┌──────────────·──────────────────────┐
 │     Infrastructure Layer             │
 │ (SchoolManagement.Infrastructure)    │
 │  - Data Persistence                  │
@@ -201,15 +200,6 @@ SchoolManagement/
     └── Tokens/                        # Token DTOs
 ```
 
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
-- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) (or SQL Server Express)
-- [Visual Studio 2026](https://visualstudio.microsoft.com/) or [VS Code](https://code.visualstudio.com/) with C# extension
-- [Git](https://git-scm.com/)
-
 ## 📚 API Documentation
 
 ### Available Endpoints
@@ -259,7 +249,7 @@ The project includes **Scalar** for interactive API documentation, which provide
 - **Events**: School events and participants
 - **Guardians**: Student guardians
 
-```
+
 
 ## 🔐 Authentication & Authorization
 
@@ -296,7 +286,6 @@ The system supports the following roles:
 - **Validation**: FluentValidation for input validation
 - **Mapping**: Mapster for object-to-object mapping
 
-```
 
 ### Project Dependencies
 
@@ -314,11 +303,7 @@ The system supports the following roles:
 
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
-## 📝 License
-
-[Specify your license here]
-
-## 👥 Contributors
+## 👥 Contact info 
 
 [hasan.raisann@gamil.com]
 
