@@ -330,7 +330,7 @@ The system supports the following roles:
 ---
 ---
 ## 🖼️ Preview
-**This is a private project; you can explore these images.
+**This is a private project; you can explore these images.**
 ### Application Layer:
 <img width="413" height="1135" alt="Screenshot 2026-01-25 174724" src="https://github.com/user-attachments/assets/1452f41f-fbd2-4910-8d79-7e0cab3e6d82" />
 <img width="513" height="997" alt="Screenshot 2026-01-25 174751" src="https://github.com/user-attachments/assets/ca22a0c9-c45f-4c42-9758-0c966377b9ec" />
