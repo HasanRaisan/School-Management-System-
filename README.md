@@ -330,18 +330,18 @@ The system supports the following roles:
 ---
 ---
 ## 🖼️ Preview
-**This is a private project, you can explore these images.
-###Application Layer:
+**This is a private project; you can explore these images.
+### Application Layer:
 <img width="413" height="1135" alt="Screenshot 2026-01-25 174724" src="https://github.com/user-attachments/assets/1452f41f-fbd2-4910-8d79-7e0cab3e6d82" />
 <img width="513" height="997" alt="Screenshot 2026-01-25 174751" src="https://github.com/user-attachments/assets/ca22a0c9-c45f-4c42-9758-0c966377b9ec" />
 
-###Domain Layer:
+### Domain Layer:
 <img width="389" height="1023" alt="Screenshot 2026-01-25 174836" src="https://github.com/user-attachments/assets/e8810cf7-997f-44cb-8e8b-73f6997ba9ef" />
 <img width="398" height="1336" alt="Screenshot 2026-01-25 174934" src="https://github.com/user-attachments/assets/d39374e4-995b-479f-87f8-e058eb4a3c5e" />
 
-###Infrastructure:
+### Infrastructure:
 <img width="432" height="1263" alt="Screenshot 2026-01-25 175015" src="https://github.com/user-attachments/assets/d1382f54-ea0f-4d48-896f-0c2aa32db8ec" />
 
-###Contracts:
+### Contracts:
 <img width="345" height="221" alt="Screenshot 2026-01-25 174836439" src="https://github.com/user-attachments/assets/6e3c88f6-320b-4d0c-9ae0-8f16653ef534" />
 
