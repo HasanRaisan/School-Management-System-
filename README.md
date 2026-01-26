@@ -13,8 +13,8 @@ A comprehensive School Management System built with ASP.NET Core, following Clea
 - [Database](#database)
 - [Authentication & Authorization](#authentication--authorization)
 - [Development](#development)
-- [Architecture Note](#Architecture-Note:-Distributed-Identity-Readiness)
-- [Preview](#configuration)
+- [Architecture Note](#architecture-note-distributed-identity-readiness)
+- [Preview](#Preview)
 
 ## 🎯 Overview
 
@@ -216,7 +216,7 @@ SchoolManagement/
 
 #### Authentication
 
-- `POST /api/tokens/generate` - Generate JWT token
+- `POST /api/tokens/generate` - Generate JWT token (for testing only)
 
 ### API Documentation Tools
 
@@ -304,8 +304,7 @@ The system supports the following roles:
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
 ## 👥 Contact info 
-
-[hasan.raisann@gamil.com]
+[hasan.raisann@gmail.com]
 
 
 ## Architecture Note: Distributed Identity Readiness
