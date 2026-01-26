@@ -114,36 +114,36 @@ The project follows **Clean Architecture** principles with clear separation of c
 ┌─────────────────────────────────────┐
 │         API Layer                   │
 │    (SchoolManagement.API)           │
-│  - Controllers                       │
-│  - Middleware                        │
-│  - Mapping                           │
+│  - Controllers                      │
+│  - Middleware                       │
+│  - Mapping                          │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────·──────────────────────┐
-│      Application Layer               │
-│ (SchoolManagement.Application)       │
-│  - Commands & Queries                │
-│  - Handlers                          │
-│  - Behaviors                         │
-│  - Interfaces                        │
+│      Application Layer              │
+│ (SchoolManagement.Application)      │
+│  - Commands & Queries               │
+│  - Handlers                         │
+│  - Behaviors                        │
+│  - Interfaces                       │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────·──────────────────────┐
 │        Domain Layer                 │
 │  (SchoolManagement.Domain)          │
-│  - Entities                          │
-│  - Value Objects                     │
-│  - Domain Logic                      │
-│  - Domain Errors                     │
+│  - Entities                         │
+│  - Value Objects                    │
+│  - Domain Logic                     │
+│  - Domain Errors                    │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────·──────────────────────┐
-│     Infrastructure Layer             │
-│ (SchoolManagement.Infrastructure)    │
-│  - Data Persistence                  │
-│  - Repositories                      │
-│  - Security                          │
-│  - External Services                 │
+│     Infrastructure Layer            │
+│ (SchoolManagement.Infrastructure)   │
+│  - Data Persistence                 │
+│  - Repositories                     │
+│  - Security                         │
+│  - External Services                │
 └─────────────────────────────────────┘
 ```
 
@@ -316,6 +316,12 @@ The system supports the following roles:
 ---
 ## 🖼️ Preview
 **This is a private project; you can explore these images.**
+### System Layers
+<img width="523" height="235" alt="Screenshot 2026-01-26 170204" src="https://github.com/user-attachments/assets/fd86b4bb-61d9-459c-9eb7-4e95e6824dbf" />
+
+### API Layer:
+<img width="417" height="764" alt="Screenshot 2026-01-26 165842" src="https://github.com/user-attachments/assets/a857d47e-b723-4bb2-81ea-c3cf71f28e87" />
+
 ### Application Layer:
 <img width="413" height="1135" alt="Screenshot 2026-01-25 174724" src="https://github.com/user-attachments/assets/1452f41f-fbd2-4910-8d79-7e0cab3e6d82" />
 <img width="513" height="997" alt="Screenshot 2026-01-25 174751" src="https://github.com/user-attachments/assets/ca22a0c9-c45f-4c42-9758-0c966377b9ec" />
