@@ -200,7 +200,7 @@ SchoolManagement/
     └── Tokens/                        # Token DTOs
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 ### Available Endpoints
 
@@ -251,7 +251,7 @@ The project includes **Scalar** for interactive API documentation, which provide
 
 
 
-## 🔐 Authentication & Authorization
+## Authentication & Authorization
 
 ### Authentication
 - **JWT Bearer Authentication** for API access
@@ -303,17 +303,17 @@ The system supports the following roles:
 
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
-## 👥 Contact info 
+## Contact info 
 [hasan.raisann@gmail.com]
 
 
-## 👥 Architecture Note: Distributed Identity Readiness
+## Architecture Note: Distributed Identity Readiness
 
 - The system implements a Strict Separation of Concerns between User Identity and Domain Entities. This decoupled design ensures the Identity module is functionally autonomous, enabling a seamless transition to a dedicated Identity Server or a Microservices architecture with zero refactoring of the core business logic.
 
 ---
 ---
-## 🖼️ Preview
+## Preview
 **This is a private project; you can explore these images.**
 ### System Layers
 <img width="523" height="235" alt="Screenshot 2026-01-26 170204" src="https://github.com/user-attachments/assets/fd86b4bb-61d9-459c-9eb7-4e95e6824dbf" />
