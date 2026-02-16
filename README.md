@@ -307,7 +307,7 @@ The system supports the following roles:
 [hasan.raisann@gmail.com]
 
 
-## Architecture Note: Distributed Identity Readiness
+## 👥 Architecture Note: Distributed Identity Readiness
 
 - The system implements a Strict Separation of Concerns between User Identity and Domain Entities. This decoupled design ensures the Identity module is functionally autonomous, enabling a seamless transition to a dedicated Identity Server or a Microservices architecture with zero refactoring of the core business logic.
 
