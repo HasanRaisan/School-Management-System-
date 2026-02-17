@@ -2,75 +2,64 @@
 
 A comprehensive School Management System built with ASP.NET Core, following Clean Architecture principles. This system provides a robust API for managing students, teachers, academic records, financial transactions, and more.
 
-## 📋 Table of Contents
+# Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Architecture](#architecture)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
-- [Database](#database)
-- [Authentication & Authorization](#authentication--authorization)
-- [Development](#development)
-- [Architecture Note](#architecture-note-distributed-identity-readiness)
-- [Preview](#Preview)
-
-## 🎯 Overview
+# Overview
 
 The School Management System is a modern, scalable solution that handles all aspects of school administration. It provides RESTful APIs for managing:
 
 - **Student Management**: Enrollment, attendance, academic records, and status tracking
 - **Teacher Management**: Employee records, specializations, and teaching assignments
 - **Academic Management**: Academic years, grades, subjects, and school stages
-- **Financial Management**: Fees, payments, fines, and payment methods
+- **Financial Management**: Fees, payments, fines, payment methods, Expenses, and teachers' salaries
 - **Classroom Management**: Classrooms, sections, and teaching assignments
 - **Examination System**: Exams, examiners, and results
 - **Events & Awards**: School events and student awards
 - **Guardian Management**: Student guardians and relationships
 
-## ✨ Features
+# Use Cases / Features
 
-### Core Features
+## Core Features
 
-- ✅ **Student Management**
+- **Student Management**
   - Student enrollment and registration
   - Student status tracking (Pending, Active, Graduated, etc.)
   - Student attendance tracking
   - Academic year enrollment management
 
-- ✅ **Teacher Management**
+- **Teacher Management**
   - Teacher registration and employee management
   - Specialization management
   - Teaching assignments to class sections
   - Job title and department management
 
-- ✅ **Academic Management**
+- **Academic Management**
   - Academic year management
   - Grade and grade type management
   - Subject management
   - School stage management
   - Promotion status tracking
 
-- ✅ **Financial Management**
+- **Financial Management**
   - Fee management and fee types
   - Payment processing with multiple payment methods
   - Fine management
   - Student fee tracking
+  - Expenses and Teacher's Salary
 
-- ✅ **Classroom Management**
+- **Classroom Management**
   - Classroom and hall management
   - Class section management
   - Section teaching assignments
   - Weekly schedule management
 
-- ✅ **Examination System**
+- **Examination System**
   - Exam creation and management
   - Exam class section assignments
   - Examiner assignments
   - Exam results tracking
 
-- ✅ **Additional Features**
+- **Additional Features**
   - Events and event participants
   - Awards and award types
   - Guardian management
@@ -78,9 +67,9 @@ The School Management System is a modern, scalable solution that handles all asp
   - Login audit tracking
   - School holidays management
 
-## 🛠 Technology Stack
+# Technology Stack
 
-### Backend
+## Backend
 
 - **.NET 10.0** - Latest .NET framework
 - **ASP.NET Core** - Web API framework
@@ -93,12 +82,7 @@ The School Management System is a modern, scalable solution that handles all asp
 - **JWT Bearer Authentication** - Authentication mechanism
 - **ASP.NET Core Identity** - User management
 
-### API Documentation
-
-- **Scalar** - Interactive API documentation
-- **OpenAPI** - API specification
-
-### Architecture Patterns
+## Architecture Patterns
 
 - **Clean Architecture** - Separation of concerns
 - **CQRS** - Command Query Responsibility Segregation
@@ -106,178 +90,194 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Unit of Work Pattern** - Transaction management
 - **Domain-Driven Design (DDD)** - Domain-centric design
 
-## 🏗 Architecture
+# Folder Structure
 
-The project follows **Clean Architecture** principles with clear separation of concerns:
-
-```
-┌─────────────────────────────────────┐
-│         API Layer                   │
-│    (SchoolManagement.API)           │
-│  - Controllers                      │
-│  - Middleware                       │
-│  - Mapping                          │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────·──────────────────────┐
-│      Application Layer              │
-│ (SchoolManagement.Application)      │
-│  - Commands & Queries               │
-│  - Handlers                         │
-│  - Behaviors                        │
-│  - Interfaces                       │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────·──────────────────────┐
-│        Domain Layer                 │
-│  (SchoolManagement.Domain)          │
-│  - Entities                         │
-│  - Value Objects                    │
-│  - Domain Logic                     │
-│  - Domain Errors                    │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────·──────────────────────┐
-│     Infrastructure Layer            │
-│ (SchoolManagement.Infrastructure)   │
-│  - Data Persistence                 │
-│  - Repositories                     │
-│  - Security                         │
-│  - External Services                │
-└─────────────────────────────────────┘
-```
-
-### Layer Responsibilities
+## Layer Responsibilities
 
 - **API Layer**: Handles HTTP requests, routing, and API documentation
 - **Application Layer**: Contains business logic, commands, queries, and validation
 - **Domain Layer**: Core business entities, domain rules, and value objects
 - **Infrastructure Layer**: Data access, external services, and infrastructure concerns
 
-## 📁 Project Structure
+# Database
 
-```
-SchoolManagement/
-├── SchoolManagement.API/              # Web API project
-│   ├── Controllers/                   # API controllers
-│   ├── Middleware/                    # Custom middleware
-│   ├── Mapping/                       # DTO mapping configurations
-│   └── Program.cs                     # Application entry point
-│
-├── SchoolManagement.Application/      # Application layer
-│   ├── Students/                      # Student-related commands/queries
-│   ├── Employees/                     # Employee/Teacher commands/queries
-│   ├── Token/                         # Authentication token queries
-│   ├── Common/                        # Shared application logic
-│   │   ├── Behaviors/                 # MediatR behaviors
-│   │   ├── Interfaces/                # Application interfaces
-│   │   └── Security/                  # Security-related code
-│   └── Shared/                        # Shared application components
-│
-├── SchoolManagement.Domain/           # Domain layer
-│   ├── Students/                      # Student domain entities
-│   ├── Employees/                     # Employee/Teacher entities
-│   ├── Academic/                      # Academic entities
-│   ├── Financial/                     # Financial entities
-│   ├── Classrooms/                    # Classroom entities
-│   ├── Exams/                         # Examination entities
-│   ├── Events/                        # Event entities
-│   ├── Guardians/                     # Guardian entities
-│   ├── Common/                        # Shared domain logic
-│   └── Guards/                        # Domain validation guards
-│
-├── SchoolManagement.Infrastructure/   # Infrastructure layer
-│   ├── Persistence/                   # EF Core configurations
-│   ├── Repositories/                  # Repository implementations
-│   ├── Security/                      # Security implementations
-│   ├── Services/                      # External service implementations
-│   └── Migrations/                    # Database migrations
-│
-└── SchoolManagement.Contracts/        # Shared contracts/DTOs
-    ├── Student/                       # Student DTOs
-    ├── Employee/                      # Employee/Teacher DTOs
-    ├── Person/                        # Person DTOs
-    └── Tokens/                        # Token DTOs
-```
-
-## API Documentation
-
-### Available Endpoints
-
-#### Student Management
-
-- `POST /api/student` - Create a new student
-- `GET /api/student?studentId={guid}` - Get student by ID
-
-#### Teacher Management
-
-- `POST /api/teacher` - Create a new teacher
-- `GET /api/teacher?studentId={guid}` - Get teacher by ID
-
-#### Authentication
-
-- `POST /api/tokens/generate` - Generate JWT token (for testing only)
-
-### API Documentation Tools
-
-The project includes **Scalar** for interactive API documentation, which provides:
-
-- Interactive API explorer
-- Request/response examples
-- Schema documentation
-- Try-it-out functionality
-
-## 🗄 Database
-
-### Database Provider
+## Database Provider
 
 - **SQL Server** - Primary database
 
-### Entity Framework Core
+## Entity Framework Core
 
 - Uses EF Core 10.0.1 for ORM
 - Repository pattern for data access
 
-### Key Entities
+## Key Entities
 
 - **Students**: Student records and enrollments
 - **Teachers**: Teacher and employee records
 - **Academic**: Academic years, grades, subjects
-- **Financial**: Fees, payments, fines
+- **Financial**: Fees, payments, fines, expenses
 - **Classrooms**: Classrooms, sections, schedules
 - **Exams**: Exams, results, examiners
 - **Events**: School events and participants
 - **Guardians**: Student guardians
 
+# Authorization 🔐
 
+This project puts an emphasis on complex authorization scenarios and supports _role-based_, _permission-based_ and _policy-based_ authorization.
 
-## Authentication & Authorization
+To applay any authorization type:
 
-### Authentication
-- **JWT Bearer Authentication** for API access
-- Token generation endpoint: `POST /api/tokens/generate`
+- Use the `Authorize` attribute with the parameter.
+- Implement `IBaseAuthorizeableRequest` through one of the derived interfaces such as `IBasicAuthorizeableRequest`, `ITeacherRequest`, or others.
+- Implementing `IBaseAuthorizeableRequest` ensures the request enters the Authorization Pipeline Behavior.
 
-### Roles
-The system supports the following roles:
-- **Admin** - Full system access
-- **Teacher** - Teacher-specific access
-- **Student** - Student-specific access
-- **Guardian** - Parent/guardian access
+```csharp
+public class AuthorizationBehavior<TRequest, TResponse>(
+    IAuthorizationService _authorizationService)
+    : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : IBaseAuthorizeableRequest<TResponse>
+    where TResponse : IErrorOr
+{
+    // Execution logic
+}
+```
 
-### Security Features
-- JWT token-based authentication
-- Role-based authorization
-- Login audit tracking
-- Secure password handling via ASP.NET Core Identity
+## Authorization Types
 
-## 💻 Development
+### Role-Based Authorization
 
-### Code Style
+To apply role-based authorization:
+
+- Use the `Authorize` attribute with the `Roles` parameter.
+
+For example:
+
+```csharp
+[Authorize(Roles = Role.Admin)]
+public record CreateClassroomCommand(
+    string Number,
+    int Capacity,
+    string? Location,
+    bool IsAvailable = true
+) : IBasicAuthorizeableRequest<ErrorOr<Classroom>>;
+```
+
+Will only allow users with the `Admin` role to cancel subscriptions.
+
+### Permission-Based Authorization
+
+To apply permission-based authorization, use the `Authorize` attribute with the `Permissions` parameter
+
+For example:
+
+```csharp
+[Authorize(Permissions = Permission.Payment.Get)]
+public record GetPaymentByIdQuery(Guid StudentId, int Id) : IBasicAuthorizeableRequest<ErrorOr<Payment>>;
+```
+
+Will only allow users with the `Permission.Payment.Get` permission to get a payment.
+
+### Policy-Based Authorization
+
+To apply policy-based authorization, use the `Authorize` attribute with the `Policy` parameter
+
+For example:
+
+```csharp
+[Authorize(Policies = Policy.TeacherOfClassOrAdmin)]
+public record CreateGradeCommand(
+    int SectionId,
+    int SubjectId,
+    int GradeTypeId,
+    IReadOnlyList<StudentGradeDto> Students
+) : ITeacherRequest<ErrorOr<Success>>;
+```
+
+Will only allow users who pass the `TeacherOfClassOrAdmin` policy to create grades.
+
+Each policy is implemented as a simple method in the `PolicyEnforcer` class.
+
+The policy "TeacherOfClassOrAdmin" for example, can be implemented as follows:
+
+```csharp
+public class PolicyEnforcer : IPolicyEnforcer
+{
+        public async Task<ErrorOr<Success>> AuthorizeAsync<T>(IBaseAuthorizeableRequest<T> request,
+            CurrentUser currentUser, string policy, CancellationToken ct = default)
+        {
+            return policy switch
+            {
+                Policy.SelfOrAdmin => SelfOrAdminPolicy(request, currentUser),
+                Policy.TeacherOfClassOrAdmin => await TeacherOfClassAdminPolicy(request, currentUser, ct),
+                Policy.GuardainOfStudentOrAdmin => await GuardianOfStudentAdminPolicy(request, currentUser, ct),
+                _ => Error.Unexpected(code: "General.Unexpected", description: $"Authorization policy '{policy}' is not registered.")
+            };
+        }
+
+        private async Task<ErrorOr<Success>> TeacherOfClassAdminPolicy<T>(
+            IBaseAuthorizeableRequest<T> request,
+            CurrentUser currentUser,
+            CancellationToken ct)
+        {
+            if (currentUser.Roles.Contains(Role.Admin)) return Result.Success;
+
+            if (request is ITeacherRequest<T> teacherRequest)
+            {
+                 // Use Cashe for this
+                var isAssigned = await unitOfWork.SectionTeachingAssignments
+                    .AnyAsync(sta => sta.TeacherId == currentUser.Id &&
+                                     sta.SectionId == teacherRequest.SectionId &&
+                                     sta.SubjectId == teacherRequest.SubjectId, ct);
+
+                return isAssigned ? Result.Success
+                        : Error.Unauthorized(code: "Unauthorized", description: "Access denied: You are not assigned to this specific section and subject.");
+            }
+
+            return Error.Unexpected(code: "General.Unexpected", description: "Policy mismatch: TeacherOfClass requires a request implementing ITeacherRequest.");
+        }
+}
+```
+
+## Mixing Authorization Types
+
+You can mix and match authorization types to create complex authorization scenarios.
+
+For example:
+
+```csharp
+[Authorize(Permissions = Permission.Grades.List, Policies = Policy.TeacherOfClassOrAdmin, Roles = Role.GradeManager)]
+public record ListGradesBySectionQuery(
+int SectionId,
+int SubjectId,
+int GradeTypeId
+) : ITeacherRequest<ErrorOr<Success>>;
+```
+
+Will only allow users with the `Permission.Grades.List` permission, and who pass the `TeacherOfClassOrAdmin` policy, and who have the `GradeManager` role to list reminders.
+
+Another option, is specifying the `Authorize` attribute multiple times:
+
+```csharp
+[Authorize(Permissions = Permission.Grades.List)]
+[Authorize(Policies = Policy.TeacherOfClassOrAdmin)]
+[Authorize(Roles = Role.GradeManager)]
+public record ListGradesBySectionQuery(
+int SectionId,
+int SubjectId,
+int GradeTypeId
+) : ITeacherRequest<ErrorOr<Success>>;
+```
+
+# Development
+
+## Code Style
+
 - Follows C# coding conventions
 - Uses nullable reference types
 - Implements Clean Architecture principles
 
-### Key Patterns Used
+## Key Patterns Used
+
 - **CQRS**: Commands and Queries separation
 - **MediatR**: Mediator pattern for request handling
 - **Repository Pattern**: Data access abstraction
@@ -286,13 +286,12 @@ The system supports the following roles:
 - **Validation**: FluentValidation for input validation
 - **Mapping**: Mapster for object-to-object mapping
 
-
-### Project Dependencies
+## Project Dependencies
 
 - **SchoolManagement.API** depends on:
   - SchoolManagement.Application
   - SchoolManagement.Infrastructure
-  - SchoolManagement.Contracts
+  - SchoolManagement.Domain
 
 - **SchoolManagement.Application** depends on:
   - SchoolManagement.Domain
@@ -303,35 +302,11 @@ The system supports the following roles:
 
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
-## Contact info 
-[hasan.raisann@gmail.com]
+## Generate a token
 
+> Note: The system has an external identity provider, so the project uses a simple token generator endpoint that generates a token based on the provided details. This is a simple way to generate a token for testing purposes and is closer to how the system will likely be designed when using an external identity provider.
 
-## Architecture Note: Distributed Identity Readiness
+# Contact info
 
-- The system implements a Strict Separation of Concerns between User Identity and Domain Entities. This decoupled design ensures the Identity module is functionally autonomous, enabling a seamless transition to a dedicated Identity Server or a Microservices architecture with zero refactoring of the core business logic.
-
----
----
-## Preview
-**This is a private project; you can explore these images.**
-### System Layers
-<img width="523" height="235" alt="Screenshot 2026-01-26 170204" src="https://github.com/user-attachments/assets/fd86b4bb-61d9-459c-9eb7-4e95e6824dbf" />
-
-### API Layer:
-<img width="417" height="764" alt="Screenshot 2026-01-26 165842" src="https://github.com/user-attachments/assets/a857d47e-b723-4bb2-81ea-c3cf71f28e87" />
-
-### Application Layer:
-<img width="413" height="1135" alt="Screenshot 2026-01-25 174724" src="https://github.com/user-attachments/assets/1452f41f-fbd2-4910-8d79-7e0cab3e6d82" />
-<img width="513" height="997" alt="Screenshot 2026-01-25 174751" src="https://github.com/user-attachments/assets/ca22a0c9-c45f-4c42-9758-0c966377b9ec" />
-
-### Domain Layer:
-<img width="389" height="1023" alt="Screenshot 2026-01-25 174836" src="https://github.com/user-attachments/assets/e8810cf7-997f-44cb-8e8b-73f6997ba9ef" />
-<img width="398" height="1336" alt="Screenshot 2026-01-25 174934" src="https://github.com/user-attachments/assets/d39374e4-995b-479f-87f8-e058eb4a3c5e" />
-
-### Infrastructure:
-<img width="432" height="1263" alt="Screenshot 2026-01-25 175015" src="https://github.com/user-attachments/assets/d1382f54-ea0f-4d48-896f-0c2aa32db8ec" />
-
-### Contracts:
-<img width="345" height="221" alt="Screenshot 2026-01-25 174836439" src="https://github.com/user-attachments/assets/6e3c88f6-320b-4d0c-9ae0-8f16653ef534" />
-
+- [GitHub Profile](https://github.com/HasanRaisan)
+- [LinkedIn Profile](https://www.linkedin.com/in/hasan-raisan)
