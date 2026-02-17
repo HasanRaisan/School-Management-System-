@@ -19,7 +19,7 @@ The School Management System is a modern, scalable solution that handles all asp
 
 # Use Cases / Features
 
-## Core Features
+## Core 
 
 - **Student Management**
   - Student enrollment and registration
@@ -59,7 +59,7 @@ The School Management System is a modern, scalable solution that handles all asp
   - Examiner assignments
   - Exam results tracking
 
-- **Additional Features**
+- **Additional**
   - Events and event participants
   - Awards and award types
   - Guardian management
