@@ -81,7 +81,6 @@ The School Management System is a modern, scalable solution that handles all asp
 - **ErrorOr** - Error handling pattern
 - **Mapster** - Object mapping
 - **JWT Bearer Authentication** - Authentication mechanism
-- **ASP.NET Core Identity** - User management
 
 ## Architecture Patterns
 
@@ -126,7 +125,7 @@ The School Management System is a modern, scalable solution that handles all asp
 
 This project puts an emphasis on complex authorization scenarios and supports _role-based_, _permission-based_ and _policy-based_ authorization.
 
-To applay any authorization type:
+To apply any authorization type:
 
 - Use the `Authorize` attribute with the parameter.
 - Implement `IBaseAuthorizeableRequest` through one of the derived interfaces such as `IBasicAuthorizeableRequest`, `ITeacherRequest`, or others.
@@ -136,8 +135,8 @@ To applay any authorization type:
 public class AuthorizationBehavior<TRequest, TResponse>(
     IAuthorizationService _authorizationService)
     : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IBaseAuthorizeableRequest<TResponse>
-    where TResponse : IErrorOr
+    where TRequest: IBaseAuthorizeableRequest<TResponse>
+    where TResponse: IErrorOr
 {
     // Execution logic
 }
