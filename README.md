@@ -32,6 +32,7 @@ The School Management System is a modern, scalable solution that handles all asp
   - Specialization management
   - Teaching assignments to class sections
   - Job title and department management
+  - Teacher Available Days and periods with shift type 
 
 - **Academic Management**
   - Academic year management
