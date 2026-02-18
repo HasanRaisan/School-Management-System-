@@ -92,6 +92,9 @@ The School Management System is a modern, scalable solution that handles all asp
 
 # Folder Structure
 
+<img width="1948" height="1600" alt="Clean Architecture Template" src="https://github.com/user-attachments/assets/cf0389a3-a7a3-408a-956d-859b9f80ff24" />
+
+
 ## Layer Responsibilities
 
 - **API Layer**: Handles HTTP requests, routing, and API documentation
