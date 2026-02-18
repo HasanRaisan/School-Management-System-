@@ -4,6 +4,37 @@ A comprehensive School Management System built with ASP.NET Core, following Clea
 
 ## Table of Contents
 
+- [Overview](#overview)
+- [Use Cases / Features](#use-cases--features)
+  - [Core](#core)
+- [Technology Stack](#technology-stack)
+  - [Backend](#backend)
+  - [Architecture Patterns](#architecture-patterns)
+- [Folder Structure](#folder-structure)
+  - [Layer Responsibilities](#layer-responsibilities)
+- [Database](#database)
+  - [Database Provider](#database-provider)
+  - [Entity Framework Core](#entity-framework-core)
+  - [Key Entities](#key-entities)
+- [Authorization](#authorization)
+  - [Authorization Types](#authorization-types)
+    - [Role-Based Authorization](#role-based-authorization)
+    - [Permission-Based Authorization](#permission-based-authorization)
+    - [Policy-Based Authorization](#policy-based-authorization)
+  - [Mixing Authorization Types](#mixing-authorization-types)
+- [Multi Tenancy Architecture](#multi-tenancy-architecture)
+  - [Tenancy Model](#tenancy-model)
+  - [Tenant Isolation Strategy](#tenant-isolation-strategy)
+  - [Tenant Resolution](#tenant-resolution)
+  - [User Model in Multi-Tenant Context](#user-model-in-multi-tenant-context)
+  - [Data Security](#data-security)
+- [Development](#development)
+  - [Code Style](#code-style)
+  - [Key Patterns Used](#key-patterns-used)
+  - [Project Dependencies](#project-dependencies)
+  - [Generate a token](#generate-a-token)
+- [Contact info](#contact-info)
+
 ## Overview
 
 The School Management System is a modern, scalable solution that handles all aspects of school administration. It provides RESTful APIs for managing:
@@ -124,7 +155,7 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Events**: School events and participants
 - **Guardians**: Student guardians
 
-## Authorization 🔐
+## Authorization
 
 This project puts an emphasis on complex authorization scenarios and supports _role-based_, _permission-based_ and _policy-based_ authorization.
 
