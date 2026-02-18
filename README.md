@@ -2,9 +2,9 @@
 
 A comprehensive School Management System built with ASP.NET Core, following Clean Architecture principles. This system provides a robust API for managing students, teachers, academic records, financial transactions, and more.
 
-# Table of Contents
+## Table of Contents
 
-# Overview
+## Overview
 
 The School Management System is a modern, scalable solution that handles all aspects of school administration. It provides RESTful APIs for managing:
 
@@ -17,9 +17,9 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Events & Awards**: School events and student awards
 - **Guardian Management**: Student guardians and relationships
 
-# Use Cases / Features
+## Use Cases / Features
 
-## Core 
+### Core 
 
 - **Student Management**
   - Student enrollment and registration
@@ -68,9 +68,9 @@ The School Management System is a modern, scalable solution that handles all asp
   - Login audit tracking
   - School holidays management
 
-# Technology Stack
+## Technology Stack
 
-## Backend
+### Backend
 
 - **.NET 10.0** - Latest .NET framework
 - **ASP.NET Core** - Web API framework
@@ -82,7 +82,7 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Mapster** - Object mapping
 - **JWT Bearer Authentication** - Authentication mechanism
 
-## Architecture Patterns
+### Architecture Patterns
 
 - **Clean Architecture** - Separation of concerns
 - **CQRS** - Command Query Responsibility Segregation
@@ -90,30 +90,30 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Unit of Work Pattern** - Transaction management
 - **Domain-Driven Design (DDD)** - Domain-centric design
 
-# Folder Structure
+## Folder Structure
 
 <img width="1948" height="1600" alt="Clean Architecture Template" src="https://github.com/user-attachments/assets/cf0389a3-a7a3-408a-956d-859b9f80ff24" />
+> Note: This is a purposive sample, not all code.
 
-
-## Layer Responsibilities
+### Layer Responsibilities
 
 - **API Layer**: Handles HTTP requests, routing, and API documentation
 - **Application Layer**: Contains business logic, commands, queries, and validation
 - **Domain Layer**: Core business entities, domain rules, and value objects
 - **Infrastructure Layer**: Data access, external services, and infrastructure concerns
 
-# Database
+## Database
 
-## Database Provider
+### Database Provider
 
 - **SQL Server** - Primary database
 
-## Entity Framework Core
+### Entity Framework Core
 
 - Uses EF Core 10.0.1 for ORM
 - Repository pattern for data access
 
-## Key Entities
+### Key Entities
 
 - **Students**: Student records and enrollments
 - **Teachers**: Teacher and employee records
@@ -124,7 +124,7 @@ The School Management System is a modern, scalable solution that handles all asp
 - **Events**: School events and participants
 - **Guardians**: Student guardians
 
-# Authorization 🔐
+## Authorization 🔐
 
 This project puts an emphasis on complex authorization scenarios and supports _role-based_, _permission-based_ and _policy-based_ authorization.
 
@@ -145,9 +145,9 @@ public class AuthorizationBehavior<TRequest, TResponse>(
 }
 ```
 
-## Authorization Types
+### Authorization Types
 
-### Role-Based Authorization
+#### Role-Based Authorization
 
 To apply role-based authorization:
 
@@ -167,7 +167,7 @@ public record CreateClassroomCommand(
 
 Will only allow users with the `Admin` role to cancel subscriptions.
 
-### Permission-Based Authorization
+#### Permission-Based Authorization
 
 To apply permission-based authorization, use the `Authorize` attribute with the `Permissions` parameter
 
@@ -180,7 +180,7 @@ public record GetPaymentByIdQuery(Guid StudentId, int Id) : IBasicAuthorizeableR
 
 Will only allow users with the `Permission.Payment.Get` permission to get a payment.
 
-### Policy-Based Authorization
+#### Policy-Based Authorization
 
 To apply policy-based authorization, use the `Authorize` attribute with the `Policy` parameter
 
@@ -241,7 +241,7 @@ public class PolicyEnforcer : IPolicyEnforcer
 }
 ```
 
-## Mixing Authorization Types
+### Mixing Authorization Types
 
 You can mix and match authorization types to create complex authorization scenarios.
 
@@ -271,15 +271,15 @@ int GradeTypeId
 ) : ITeacherRequest<ErrorOr<Success>>;
 ```
 
-# Development
+## Development
 
-## Code Style
+### Code Style
 
 - Follows C# coding conventions
 - Uses nullable reference types
 - Implements Clean Architecture principles
 
-## Key Patterns Used
+### Key Patterns Used
 
 - **CQRS**: Commands and Queries separation
 - **MediatR**: Mediator pattern for request handling
@@ -289,7 +289,7 @@ int GradeTypeId
 - **Validation**: FluentValidation for input validation
 - **Mapping**: Mapster for object-to-object mapping
 
-## Project Dependencies
+### Project Dependencies
 
 - **SchoolManagement.API** depends on:
   - SchoolManagement.Application
@@ -305,11 +305,11 @@ int GradeTypeId
 
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
-## Generate a token
+### Generate a token
 
 > Note: The system has an external identity provider, so the project uses a simple token generator endpoint that generates a token based on the provided details. This is a simple way to generate a token for testing purposes and is closer to how the system will likely be designed when using an external identity provider.
 
-# Contact info
+## Contact info
 
 - [GitHub Profile](https://github.com/HasanRaisan)
 - [LinkedIn Profile](https://www.linkedin.com/in/hasan-raisan)
