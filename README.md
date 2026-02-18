@@ -271,6 +271,58 @@ int GradeTypeId
 ) : ITeacherRequest<ErrorOr<Success>>;
 ```
 
+## Multi Tenancy Architecture
+This system is designed as a SaaS application supporting multiple schools using a **shared database and shared schema** model.
+
+
+
+### Tenancy Model
+
+- **Multi Tenant**
+- **Same Database**
+- **Same Schema**
+- **Logical data isolation using TenantId**
+
+Each school is treated as a separate tenant.  
+All data is isolated logically using a `TenantId` column across all tenant-owned entities.
+
+
+
+### Tenant Isolation Strategy
+
+Every tenant-scoped entity includes `TenantId.`
+
+All queries are filtered automatically by `TenantId` to prevent cross-school data access.
+**Global Query Filter Example:**
+
+```csharp
+builder.Entity<Student>()
+    .HasQueryFilter(s => s.TenantId == _currentTenant.Id);
+```
+### Tenant Resolution
+`TenantId` is resolved per request using JWT claim
+Example: 
+```json
+{
+  "sub": "user-id",
+  "role": "Teacher",
+  "tenant_id": "school-id"
+}
+```
+
+### User Model in Multi-Tenant Context
+Supported user roles per tenant:
+- **Admin**
+- **Teacher**
+- **Student**
+- **Guardian**
+
+### Data Security
+- All queries enforce `TenantId` filtering
+- Authorization policies are tenant-aware
+- No cross-tenant joins are allowed
+- Background jobs operate per tenant scope
+
 ## Development
 
 ### Code Style
