@@ -1,6 +1,8 @@
 # School Management System
 
-A comprehensive School Management System built with ASP.NET Core, following Clean Architecture principles. This system provides a robust API for managing students, teachers, academic records, financial transactions, and more.
+Multi tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR, role, permission, and policy based authorization. Designed scalable REST APIs covering student lifecycle, teacher, guardian, examinations, and financial operations with secure JWT based authentication.
+
+> Note: Full project source code available upon request during interviews or collaboration discussions.
 
 ## Table of Contents
 
