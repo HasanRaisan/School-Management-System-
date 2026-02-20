@@ -1,6 +1,6 @@
 # School Management System
 
-Multi tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR, role, permission, and policy based authorization. Designed scalable REST APIs covering student lifecycle, teacher, guardian, examinations, and financial operations with secure JWT based authentication.
+Multi-tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR, role, permission, and policy-based authorization. Designed scalable REST APIs covering student lifecycle, teacher, guardian, examinations, and financial operations with secure JWT-based authentication.
 
 > Note: Full project source code available upon request during interviews or collaboration discussions.
 
@@ -126,7 +126,9 @@ The School Management System is a modern, scalable solution that handles all asp
 ## Folder Structure
 
 <img width="1948" height="1600" alt="Clean Architecture Template" src="https://github.com/user-attachments/assets/cf0389a3-a7a3-408a-956d-859b9f80ff24" />
-> Note: This is a purposive sample, not all code.
+
+> **Note: This is a purposive sample, not all code.**
+
 
 ### Layer Responsibilities
 
@@ -289,9 +291,9 @@ int GradeTypeId
 ) : ITeacherRequest<ErrorOr<Success>>;
 ```
 
-Will only allow users with the `Permission.Grades.List` permission, and who pass the `TeacherOfClassOrAdmin` policy, and who have the `GradeManager` role to list reminders.
+Will only allow users with the `Permission.Grades.List` permission, who pass the `TeacherOfClassOrAdmin` policy, and who have the `GradeManager` role, to list reminders.
 
-Another option, is specifying the `Authorize` attribute multiple times:
+Another option is specifying the `Authorize` attribute multiple times:
 
 ```csharp
 [Authorize(Permissions = Permission.Grades.List)]
@@ -334,6 +336,7 @@ builder.Entity<Student>()
 ```
 ### Tenant Resolution
 `TenantId` is resolved per request using JWT claim
+
 Example: 
 ```json
 {
