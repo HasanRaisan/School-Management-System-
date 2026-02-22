@@ -341,8 +341,8 @@ Example:
 ```json
 {
   "sub": "user-id",
-  "role": "Teacher",
-  "tenant_id": "school-id"
+  "role": "teacher",
+  "schoolId": "school-id"
 }
 ```
 
