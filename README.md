@@ -267,7 +267,7 @@ public class PolicyEnforcer : IPolicyEnforcer
                                      sta.SectionId == teacherRequest.SectionId &&
                                      sta.SubjectId == teacherRequest.SubjectId, ct);
 
-                return isAssigned ? Result.Success
+                return isAssigned? Result.Success
                         : Error.Unauthorized(code: "Unauthorized", description: "Access denied: You are not assigned to this specific section and subject.");
             }
 
@@ -332,7 +332,7 @@ All queries are filtered automatically by `TenantId` to prevent cross-school dat
 
 ```csharp
 builder.Entity<Student>()
-    .HasQueryFilter(s => s.TenantId == _currentTenant.Id);
+    .HasQueryFilter(s => s.TenantId == _currentUser.TenantId);
 ```
 ### Tenant Resolution
 `TenantId` is resolved per request using JWT claim
