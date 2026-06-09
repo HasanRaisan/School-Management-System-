@@ -331,8 +331,17 @@ All queries are filtered automatically by `TenantId` to prevent cross-school dat
 **Global Query Filter Example:**
 
 ```csharp
-builder.Entity<Student>()
-    .HasQueryFilter(s => s.TenantId == _currentUser.TenantId);
+    var method = typeof(SchoolDbContext)
+        .GetMethod(nameof(BuildSchoolFilter), BindingFlags.Instance | BindingFlags.NonPublic)!
+        .MakeGenericMethod(clrType);
+     var filter = (LambdaExpression)method.Invoke(this, null)!;
+         modelBuilder.Entity(clrType).HasQueryFilter(filter);
+
+    private Expression<Func<TEntity, bool>> BuildSchoolFilter<TEntity>()
+    where TEntity: class, ISchoolId
+    {
+        return e => e.SchoolId == CurrentSchoolId;
+    }
 ```
 ### Tenant Resolution
 `TenantId` is resolved per request using JWT claim
@@ -357,7 +366,6 @@ Supported user roles per tenant:
 - All queries enforce `TenantId` filtering
 - Authorization policies are tenant-aware
 - No cross-tenant joins are allowed
-- Background jobs operate per tenant scope
 
 ## Development
 
