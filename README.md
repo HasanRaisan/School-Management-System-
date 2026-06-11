@@ -125,7 +125,7 @@ The School Management System is a modern, scalable solution that handles all asp
 
 ## Folder Structure
 
-<img width="1948" height="1600" alt="Clean Architecture Template" src="https://github.com/user-attachments/assets/cf0389a3-a7a3-408a-956d-859b9f80ff24" />
+<img width="1948" height="1600" alt="Clean Architecture" src="https://github.com/user-attachments/assets/cf0389a3-a7a3-408a-956d-859b9f80ff24" />
 
 > **Note: This is a purposive sample, not all code.**
 
@@ -161,7 +161,7 @@ The School Management System is a modern, scalable solution that handles all asp
 
 ## Authorization
 
-This project puts an emphasis on complex authorization scenarios and supports _role-based_, _permission-based_ and _policy-based_ authorization.
+This project emphasizes complex authorization scenarios and supports _role-based_, _permission-based_, and _policy-based_ authorization.
 
 To apply any authorization type:
 
