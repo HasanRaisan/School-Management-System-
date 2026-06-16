@@ -3,6 +3,7 @@
 Multi-tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR and role-, permission-, and policy-based authorization. Designed scalable REST APIs covering the students' lifecycle, teachers, guardians, examinations, financial operations, and more with secure JWT-based authentication.
 
 ---
+## Front-End (REACT JS) REEADME FILE. (COMING SOON)
 
 ## 🔒 Source Code Access Notice
 
