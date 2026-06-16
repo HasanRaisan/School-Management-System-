@@ -2,7 +2,27 @@
 
 Multi-tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR and role-, permission-, and policy-based authorization. Designed scalable REST APIs covering the students' lifecycle, teachers, guardians, examinations, financial operations, and more with secure JWT-based authentication.
 
-> Note: Full project source code available upon request during interviews or collaboration discussions.
+---
+
+## 🔒 Source Code Access Notice
+
+> **Important Note:** To protect intellectual property, this public repository serves as an **Architecture Showcase**. It contains the complete architectural framework, layer separations, interfaces, and selected design patterns. The core production business logic and sensitive infrastructure configurations are withheld.
+
+> **How to review the full source code?**
+> If you are a hiring manager, technical recruiter, or software engineer reviewing my profile for employment opportunities, I will gladly grant you full access to the private production repository. 
+> * **Request Access via Email:** [hasan.raisann@gmail.com]
+> * Please include your GitHub username and the company you represent.
+
+---
+
+## 📺 Architecture & Technical Walkthrough (3-Min Video)
+
+Before diving into the files, you can watch this quick technical walkthrough where I explain the core architecture, design decisions, and how data flows through the system:
+
+👉 **[Watch the Technical Video Walkthrough on YouTube (COMING SOON)]()**
+
+*In this video, I cover: Multi-tenancy isolation logic, Keycloak authorization integration, pipelines, and MediatR command handling.*
+
 
 ## Table of Contents
 
