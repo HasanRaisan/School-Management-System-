@@ -1,9 +1,17 @@
 # School Management System
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![EF Core](https://img.shields.io/badge/EF%20Core-10.0-512BD4)](https://docs.microsoft.com/ef/core/)
+[![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC2927?logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/sql-server/)
+[![Keycloak](https://img.shields.io/badge/Keycloak-24.0-CH2927?logo=keycloak&logoColor=white)](https://www.keycloak.org/)
+[![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-blue)](#architecture)
+[![DDD](https://img.shields.io/badge/Pattern-Domain%20Driven%20Design-orange)](#design-patterns)
+[![CQRS & MediatR](https://img.shields.io/badge/Pattern-CQRS%20%26%20MediatR-black)](#cqrs-mediatr)
+[![Hangfire](https://img.shields.io/badge/Background%20Jobs-Hangfire-red?logo=hangfire)](https://www.hangfire.io/)
 
 Multi-tenant system built using ASP.NET Core and Clean Architecture, serving multiple schools. Implemented CQRS with MediatR and role-, permission-, and policy-based authorization. Designed scalable REST APIs covering the students' lifecycle, teachers, guardians, examinations, financial operations, and more with secure JWT-based authentication.
 
 ---
-## Front-End (REACT JS) REEADME FILE. (COMING SOON)
+## Front-End (ReactJS) README FILE. (COMING SOON)
 
 ## 🔒 Source Code Access Notice
 
@@ -13,8 +21,6 @@ Multi-tenant system built using ASP.NET Core and Clean Architecture, serving mul
 > If you are a hiring manager, technical recruiter, or software engineer reviewing my profile for employment opportunities, I will gladly grant you full access to the private production repository. 
 > * **Request Access via Email:** [hasan.raisann@gmail.com]
 > * Please include your GitHub username and the company you represent.
-
----
 
 ## 📺 Architecture & Technical Walkthrough (3-Min Video)
 
