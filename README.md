@@ -1,8 +1,8 @@
 # School Management System
-[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
-[![EF Core](https://img.shields.io/badge/EF%20Core-10.0-512BD4)](https://docs.microsoft.com/ef/core/)
+[![.NET](https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![EF Core](https://img.shields.io/badge/EF%20Core-10-512BD4)](https://docs.microsoft.com/ef/core/)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC2927?logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/sql-server/)
-[![Keycloak](https://img.shields.io/badge/Keycloak-24.0-CH2927?logo=keycloak&logoColor=white)](https://www.keycloak.org/)
+[![Keycloak](https://img.shields.io/badge/Keycloak-26-CH2927?logo=keycloak&logoColor=white)](https://www.keycloak.org/)
 [![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-blue)](#architecture)
 [![DDD](https://img.shields.io/badge/Pattern-Domain%20Driven%20Design-orange)](#design-patterns)
 [![CQRS & MediatR](https://img.shields.io/badge/Pattern-CQRS%20%26%20MediatR-black)](#cqrs-mediatr)
