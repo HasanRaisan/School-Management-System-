@@ -428,10 +428,6 @@ Supported user roles per tenant:
 
 - **SchoolManagement.Domain** does not depend on any layer or external libraries (Pure C#).
 
-### Generate a token
-
-> Note: The system has an external identity provider, so the project uses a simple token generator endpoint that generates a token based on the provided details. This is a simple way to generate a token for testing purposes and is closer to how the system will likely be designed when using an external identity provider.
-
 ## Contact info
 
 - [GitHub Profile](https://github.com/HasanRaisan)
