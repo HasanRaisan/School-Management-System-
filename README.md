@@ -22,13 +22,16 @@ Multi-tenant system built using ASP.NET Core and Clean Architecture, serving mul
 > * **Request Access via Email:** [hasan.raisann@gmail.com]
 > * Please include your GitHub username and the company you represent.
 
-## 📺 Architecture & Technical Walkthrough (3-Min Video)
+
+## 📺 Architecture & Technical Walkthrough
 
 Before diving into the files, you can watch this quick technical walkthrough where I explain the core architecture, design decisions, and how data flows through the system:
 
-👉 **[Watch the Technical Video Walkthrough on YouTube (COMING SOON)]()**
+👉 **[Watch the Video on YouTube]()**
 
-*In this video, I cover: Multi-tenancy isolation logic, Keycloak authorization integration, pipelines, and MediatR command handling.*
+*In this video, I cover: Intro 0:0, Tour name 8:8 , .. *
+
+
 
 
 ## Table of Contents
